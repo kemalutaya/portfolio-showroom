@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Missed-call text-back</title><style>*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:#F5F3EE;color:#1C2430;line-height:1.6;padding:40px 20px}
+.paper{max-width:860px;margin:0 auto;background:#FFFFFF;border-radius:18px;padding:56px 60px;box-shadow:0 30px 60px -40px #0005}
+.brand{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#6B7280;margin-bottom:38px}
+.brand b{color:#1F3A5F;font-size:15px}
+.eyebrow{font-size:13px;font-weight:700;color:#D69E2E;margin-bottom:10px}
+h1{font-family:Georgia,serif;font-size:40px;line-height:1.12;letter-spacing:-.02em;margin-bottom:14px}
+h2{font-family:Georgia,serif;font-size:24px;margin:40px 0 14px}
+p{color:#374151;max-width:64ch}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:30px 0}
+.kpi{background:#EEF2F7;border-radius:14px;padding:18px 20px}
+.kpi b{display:block;font-size:30px;font-family:Georgia,serif;color:#1F3A5F}
+.kpi span{font-size:13px;color:#6B7280}
+table{width:100%;border-collapse:collapse;font-size:15px;margin-top:8px}
+th{text-align:left;font-size:12px;color:#6B7280;font-weight:600;padding:10px 12px;border-bottom:1.5px solid #E5E7EB}
+td{padding:14px 12px;border-bottom:1px solid #F0F0F0;vertical-align:top}
+.pill{display:inline-block;font-size:12px;font-weight:700;padding:3px 10px;border-radius:99px}
+.hi{background:#FDE8E8;color:#B42318}.md{background:#FEF3C7;color:#92400E}.lo{background:#DCFCE7;color:#166534}
+.phases{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.phase{border:1.5px solid #E5E7EB;border-radius:14px;padding:20px}
+.phase b{display:block;color:#1F3A5F;margin-bottom:6px}
+.phase ul{padding-left:18px;color:#374151;font-size:14px}
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0}
+.node{background:#EEF2F7;border-radius:12px;padding:12px 16px;font-size:14px;font-weight:600}
+.node small{display:block;font-weight:400;color:#6B7280}
+.arrow{color:#6B7280;font-size:20px}
+.chat{background:#EEF2F7;border-radius:18px;padding:22px;display:grid;gap:10px;max-width:520px}
+.msg{padding:10px 14px;border-radius:14px;font-size:15px;max-width:80%}
+.them{background:#fff;justify-self:start}.us{background:#1F3A5F;color:#fff;justify-self:end}
+.bars{display:flex;align-items:flex-end;gap:10px;height:150px;margin:20px 0 6px}
+.bars i{flex:1;background:#1F3A5F;border-radius:8px 8px 0 0;opacity:.85}
+.bars i.now{background:#D69E2E;opacity:1}
+.days{display:flex;gap:10px;font-size:12px;color:#6B7280}.days span{flex:1;text-align:center}
+@media(max-width:700px){.paper{padding:32px 24px}.kpis,.phases{grid-template-columns:1fr}}</style></head><body><div class="paper"><div class="brand"><b>Northlight Studio</b><span>Prepared by Mara Lindqvist · September 2026</span></div>
+<p class="eyebrow">Build note · lead capture</p><h1>Missed-call text-back</h1><p style="font-size:18px">When nobody picks up, the caller gets a friendly text with a booking link within eight seconds, and the team sees the lead in the CRM.</p><div class="flow"><span class="node">Call missed<small>front desk busy</small></span><span class="arrow">→</span><span class="node">Wait 5 s<small>in case they pick up</small></span><span class="arrow">→</span><span class="node">SMS sent<small>with booking link</small></span><span class="arrow">→</span><span class="node">Lead created<small>tagged “text-back”</small></span><span class="arrow">→</span><span class="node">Slack nudge<small>if no booking in 1 h</small></span></div>
+<h2>The message</h2><div class="chat"><span class="msg us">Hi, sorry we missed your call at Harbor &amp; Pine! You can book here in under a minute: hp.example/book. Or reply and we will call you back.</span><span class="msg them">Thanks! Booked for Thursday 9:30.</span><span class="msg us">Perfect, see you Thursday. We will send a reminder the day before.</span></div>
+<div class="kpis"><div class="kpi"><b>8 s</b><span>Median time to text</span></div><div class="kpi"><b>31</b><span>Bookings recovered in month one</span></div><div class="kpi"><b>2 h</b><span>Time to set up per location</span></div></div></div></body></html>

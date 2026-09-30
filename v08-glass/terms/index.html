@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO comes from the content package's site.json (%site.*% tokens,
+         filled at build by packages/core/vite/site-config.ts). -->
+    <title>Mara Lindqvist - Automation &amp; funnel builder</title>
+    <meta name="description" content="Booking funnels, CRMs and AI assistants for clinics and studios, built in Lisbon." />
+    <meta name="author" content="Mara Lindqvist" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <!-- The browser bar takes the ground colour of the current mode. -->
+    <meta name="theme-color" content="#EEEAFB" />
+    <link rel="icon" type="image/svg+xml" href="/portfolio-showroom/v08-glass/favicon.svg" />
+
+    <!-- The hero avatar is above the fold on every screen. -->
+    <link rel="preload" as="image" href="/portfolio-showroom/v08-glass/avatar.png" fetchpriority="high" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mara Lindqvist" />
+    <meta property="og:title" content="Mara Lindqvist - Automation &amp; funnel builder" />
+    <meta property="og:description" content="Booking funnels, CRMs and AI assistants for clinics and studios, built in Lisbon." />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Mode before first paint: the saved choice, else the system's. Hex
+         values mirror --bg in tokens.css. -->
+    <script>
+      (function () {
+        var t = 'light';
+        try {
+          var s = localStorage.getItem('theme');
+          if (s === 'dark' || s === 'light') t = s;
+          else if (window.matchMedia('(prefers-color-scheme: dark)').matches) t = 'dark';
+        } catch (e) {}
+        document.documentElement.dataset.theme = t;
+        if (t === 'dark') document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0F0B24');
+      })();
+    </script>
+    <script type="module" crossorigin src="/portfolio-showroom/v08-glass/assets/index-BHFPB_Xf.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio-showroom/v08-glass/assets/index-aKEtBVQG.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

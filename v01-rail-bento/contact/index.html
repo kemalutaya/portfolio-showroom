@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- viewport-fit=cover: without it every env(safe-area-inset-*) the phone
+         shell pads with is 0. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <!-- SEO comes from the content package's site.json (%site.*% tokens,
+         filled at build by packages/core/vite/site-config.ts). -->
+    <title>Mara Lindqvist - Automation &amp; funnel builder</title>
+    <meta name="description" content="Booking funnels, CRMs and AI assistants for clinics and studios, built in Lisbon." />
+    <meta name="author" content="Mara Lindqvist" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <!-- The browser bar takes the page colour (--cream per theme); the inline
+         theme script below and lib/theme.ts keep it in step with the toggle.
+         Literal hex here only because this runs before any stylesheet loads. -->
+    <meta name="theme-color" content="#F4F4ED" />
+
+    <link rel="icon" type="image/svg+xml" href="/portfolio-showroom/v01-rail-bento/favicon.svg" />
+
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <!-- The rail avatar is above the fold on every desktop route. -->
+    <link rel="preload" as="image" href="/portfolio-showroom/v01-rail-bento/avatar.png" fetchpriority="high" media="(min-width: 1100px)" />
+
+    <!-- Open Graph / social share. Canonical, og:url and og:image appear
+         once site.json has a url and an image (absolute URLs). -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mara Lindqvist" />
+    <meta property="og:title" content="Mara Lindqvist - Automation &amp; funnel builder" />
+    <meta property="og:description" content="Booking funnels, CRMs and AI assistants for clinics and studios, built in Lisbon." />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Theme before first paint: no flash of the wrong palette. Default is
+         light; dark is the visitor's opt-in, persisted in localStorage. -->
+    <script>
+      (function () {
+        try {
+          document.documentElement.dataset.theme =
+            localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+        } catch (e) {
+          document.documentElement.dataset.theme = 'light';
+        }
+        if (document.documentElement.dataset.theme === 'dark') {
+          var bar = document.querySelector('meta[name="theme-color"]');
+          if (bar) bar.setAttribute('content', '#070B14');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="/portfolio-showroom/v01-rail-bento/assets/index-BT_GWdg3.js"></script>
+    <link rel="stylesheet" crossorigin href="/portfolio-showroom/v01-rail-bento/assets/index-BlVH11ot.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
